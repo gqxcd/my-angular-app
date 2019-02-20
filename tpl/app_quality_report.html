@@ -1,0 +1,278 @@
+<!-- 筛选部分 -->
+<div class="bg-light lter b-b wrapper-md">
+    <div class="row select-bar" ng-controller="selectBar">
+        <div class="col-xs-2 form-group">
+            <label class="control-label">产品线:</label>
+            <select name="account" class="form-control select-box" 
+                ng-model="productLine"
+                ng-change="productLineChanged()">
+                <option value="option 1">定位</option>
+                <option value="option 2">路况</option>
+            </select>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label class="control-label">时间范围:</label>
+            <div ng-controller="DatepickerDemoCtrl">
+                <input type="text" class="form-control date-box" 
+                    max-date="maxDate" 
+                    datepicker-popup="yyyy-MM-dd" 
+                    ng-model="dt" 
+                    is-open="opened" 
+                    datepicker-options="dateOptions" 
+                    ng-required="true" 
+                    close-text="Close" 
+                    ng-change="startDatechanged()"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </div>
+            <label class="control-label sm">至</label>
+            <div ng-controller="DatepickerDemoCtrl">
+                <input type="text" class="form-control date-box" 
+                    datepicker-popup="yyyy-MM-dd" 
+                    ng-model="dt" is-open="opened" 
+                    datepicker-options="dateOptions" 
+                    ng-required="true"
+                    close-text="Close" 
+                    ng-change="endDatechanged()"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-1">
+            <button class="btn m-b-xs w-xs btn-primary" ng-click="submit()">提交</button>
+        </div>
+    </div>
+</div>
+<div class="wrapper-md">
+<!-- 综述 -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default chart-panel">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>本期产品综述</label>
+                        <textarea class="form-control" placeholder="经理点击这里输入本期产品综述" rows="5" ng-model="toaster.text"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 饼图部分 -->
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-default chart-panel">
+                <div class="panel-heading">
+                    迁移覆盖率
+                </div>
+                <div class="panel-body">
+                    <div e-charts class="graph pie" ng-controller="PieController">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>值</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>迁移率</td>
+                                    <td>1.5%</td>
+                                    <td class="text-success">
+                                        <i class="fa fa-level-up"></i>
+                                        20%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>覆盖率</td>
+                                    <td>75%</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-level-down"></i>
+                                        15%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                       
+                    </div>
+                    <hr>     
+                    <div class="form-group">
+                        <label>数据解读</label>
+                        <textarea class="form-control" placeholder="经理点击这里输入数据解读" rows="5" ng-model="toaster.text"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default chart-panel">
+                <div class="panel-heading">
+                    迁移覆盖率
+                </div>
+                <div class="panel-body">
+                    <div e-charts class="graph pie" ng-controller="PieController">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>值</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>迁移率</td>
+                                    <td>1.5%</td>
+                                    <td class="text-success">
+                                        <i class="fa fa-level-up"></i>
+                                        20%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>覆盖率</td>
+                                    <td>75%</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-level-up"></i>
+                                        15%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                       
+                    </div>
+                    <hr>     
+                    <div class="form-group">
+                        <label>数据解读</label>
+                        <textarea class="form-control" placeholder="经理点击这里输入数据解读" rows="5" ng-model="toaster.text"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-default chart-panel">
+                <div class="panel-heading">
+                    迁移覆盖率
+                </div>
+                <div class="panel-body">
+                    <div e-charts class="graph pie" ng-controller="PieController">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>值</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>迁移率</td>
+                                    <td>1.5%</td>
+                                    <td class="text-success">
+                                        <i class="fa fa-level-up"></i>
+                                        20%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>覆盖率</td>
+                                    <td>75%</td>
+                                    <td class="text-danger">
+                                        <i class="fa fa-level-up"></i>
+                                        15%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                       
+                    </div>
+                    <hr>     
+                    <div class="form-group">
+                        <label>数据解读</label>
+                        <textarea class="form-control" placeholder="经理点击这里输入数据解读" rows="5" ng-model="toaster.text"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- top问题 -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default" ng-controller="GridDemoCtrl">
+                <div class="panel-heading">
+                    Top问题
+                </div>
+                <div class="table-responsive">
+                    <div ng-grid="gridOptions" style="min-height:420px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 用户反馈原因分析 -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-5">
+                        <div e-charts class="graph pie" ng-controller="PieController">
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div e-charts class="graph pie" ng-controller="PieController">
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-group">
+                            <label>数据解读</label>
+                            <textarea class="form-control ng-pristine ng-valid ng-touched" placeholder="经理点击这里输入数据解读" rows="8" ng-model="toaster.text"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- POI趋势图 -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-10">
+                        <div poi-chart class="graph line" ng-controller="PoiController">
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-group">
+                            <label>数据解读</label>
+                            <textarea class="form-control ng-pristine ng-valid ng-touched" placeholder="经理点击这里输入数据解读" rows="8" ng-model="toaster.text"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 生效率趋势图 -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-10">
+                        <div operative-chart class="graph line" ng-controller="OperativeRateController">
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-group">
+                            <label>数据解读</label>
+                            <textarea class="form-control ng-pristine ng-valid ng-touched" placeholder="经理点击这里输入数据解读" rows="8" ng-model="toaster.text"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

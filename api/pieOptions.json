@@ -1,0 +1,28 @@
+{
+    "tooltip" : {
+        "trigger": "item"
+    },
+    "legend": {
+        "show" : true,
+        "orient" : "vertical",
+        "x" : "left",
+        "y" : "center",
+        "data":["覆盖","非覆盖"]
+    },
+    "toolbox": {
+        "show" : false
+    },
+    "calculable" : false,
+    "series" : [
+        {
+            "name":"访问来源",
+            "type":"pie",
+            "radius" : "80%",
+            "center": ["50%", "50%"],
+            "data":[
+                {"value":75, "name":"覆盖"},
+                {"value":25, "name":"非覆盖"}
+            ]
+        }
+    ]
+}

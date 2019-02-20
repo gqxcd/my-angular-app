@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>my angular app</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/shijia.css">
+</head>
+<body ng-controller="AppController">
+    <div class="app" id="app" ng-class="{'app-header-fixed': app.settings.headerFixed, 'container': app.settings.container}" ui-view>
+    </div>
+    
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- angular -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="vendor/angular/angular-ui-router/angular-ui-router.js"></script>
+    <script src="vendor/angular/angular-cookies/angular-cookies.js"></script>
+
+    <!-- app -->
+    <script src="js/app.js"></script>
+    <script src="js/config.router.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controller/bootstrap.js"></script>
+
+    <!-- chart -->
+    <script src="../js/service/service_report.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    <script src="../js/controller/controller_report.js"></script>
+    <script src="../js/directive/directive_report.js"></script>
+
+    <!-- ng-Grid -->
+    <link rel="stylesheet" type="text/css" href="vendor/modules/ng-grid/ng-grid.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="vendor/modules/ng-grid/theme.css"></link>
+    <script src="vendor/modules/ng-grid/ng-grid.min.js"></script>
+</body>
+</html>

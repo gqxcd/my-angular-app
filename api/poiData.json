@@ -1,0 +1,132 @@
+{
+    "title": {
+        "y": "top", 
+        "x": "center", 
+        "text": "POI趋势图"
+    }, 
+    "tooltip": {
+        "trigger": "axis",
+        "axisPointer": {
+            "type": "none"
+        },
+        "textStyle": {
+            "fontSize": 12
+        }
+    }, 
+    "legend": {
+        "y": "bottom", 
+        "data": [
+            "precision", 
+            "coverage", 
+            "duplication", 
+            "pc_precision"
+        ]
+    }, 
+    "toolbox": {
+        "show": false, 
+        "feature": {
+            "mark": {
+                "show": true
+            }, 
+            "dataView": {
+                "show": true, 
+                "readOnly": false
+            }, 
+            "magicType": {
+                "show": true, 
+                "type": [
+                    "line", 
+                    "bar"
+                ]
+            }, 
+            "restore": {
+                "show": true
+            }, 
+            "saveAsImage": {
+                "show": true
+            }
+        }
+    }, 
+    "calculable": false, 
+    "xAxis": [
+        {
+            "type": "category", 
+            "boundaryGap": false, 
+            "data": [
+                "1", 
+                "1", 
+                "1", 
+                "1", 
+                "1"
+            ],
+            "splitLine": {
+                "show": false
+            }
+        }
+    ], 
+    "yAxis": [
+        {
+            "type": "value", 
+            "axisLabel": {
+                "formatter": "{value}"
+            },
+            "splitLine": {
+                "show": false
+            }
+        }
+    ], 
+    "series": [
+        {
+            "name": "precision", 
+            "type": "line", 
+            "data": [
+                11, 
+                11, 
+                15, 
+                13, 
+                12, 
+                13, 
+                10
+            ]
+        }, 
+        {
+            "name": "coverage", 
+            "type": "line", 
+            "data": [
+                1, 
+                10, 
+                2, 
+                5, 
+                3, 
+                5, 
+                0
+            ]
+        }, 
+        {
+            "name": "duplication", 
+            "type": "line", 
+            "data": [
+                1, 
+                8, 
+                2, 
+                5, 
+                9, 
+                2, 
+                8
+            ]
+        }, 
+        {
+            "name": "pc_precision", 
+            "type": "line", 
+            "data": [
+                4, 
+                0, 
+                2, 
+                3, 
+                3, 
+                2, 
+                0
+            ]
+        }
+    ]
+}
